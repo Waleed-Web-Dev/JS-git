@@ -28,3 +28,26 @@ let func = function() {
 }
 
 //All non-primitive datatype will return value object, function is function object
+
+
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// Stack(Primitive), Heap(Non-Primitive)
+
+let myname = "Waleed"
+let myname2 = myname;
+myname2 = "ahmed";
+
+console.log(myname);
+console.log(myname2);
+
+let obj01 = {
+    email : "user@hama",
+    age : 21
+}
+
+let obj02 = obj01;
+
+obj02.email = "user@gmail.com";
+console.log(obj01.email);
+console.log(obj02.email);
