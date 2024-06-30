@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <ul class="ul">
+        <li>Python</li>
+        <li>C++</li>
+    </ul>
+</body>
+
+<script>
+    function lang(language){
+           const li = document.createElement('li')
+           li.innerHTML = `${language}`;
+           document.querySelector('.ul').appendChild(li)
+    }
+
+     lang("java")
+    
+
+    function opt(lan){
+        const li = document.createElement("li")
+        li.appendChild(document.createTextNode(lan))
+        document.querySelector(".ul").appendChild(li)
+    }
+
+    opt("javascript");
+    //Edit
+
+    const el = document.querySelector("li:nth-child(3)");
+
+    const nli = document.createElement("li");
+    nli.textContent = "MOJO"
+    el.replaceWith(nli)
+
+    const le = document.querySelector("li:last-child")
+    le.remove()
+
+</script>
+</html>
