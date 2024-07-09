@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Waleed</h2>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const start = document.getElementById("start")
+    
+    const greet = "hi"
+    const st = (greet) => {console.log(`${greet} waleed and time is ${Date.now()}`)}
+
+
+    start.addEventListener("click", () => {
+        const interv = setInterval(st, 2000, greet);
+
+         const stop  = document.getElementById("stop")
+         stop.addEventListener("click", () => {
+         clearInterval(interv)
+        }) 
+    })
+
+   
+</script>
+</html>

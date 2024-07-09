@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Waleed</h2>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    const name = () => {console.log("waleed")}
+    const text = () => {document.querySelector("h2").innerHTML = "Waleed Ahmed"}
+
+    const change = setTimeout(text, 2000);
+    document.getElementById("stop").addEventListener("click",() => {
+        clearTimeout(change)
+        console.log("Stopped")
+    })
+
+
+</script>
+</html>
